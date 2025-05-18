@@ -1,9 +1,8 @@
-
 import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-dark border-t border-neon/20 pt-12 pb-6">
+    <footer className="bg-graphite border-t border-green/20 pt-12 pb-6">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
@@ -16,9 +15,9 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4">Links Rápidos</h4>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-white/60 hover:text-neon transition-colors">Home</a></li>
-              <li><a href="#courses" className="text-white/60 hover:text-neon transition-colors">Cursos</a></li>
-              <li><a href="#about" className="text-white/60 hover:text-neon transition-colors">Sobre</a></li>
+              <li><a href="#home" className="text-white/60 hover:text-green transition-colors">Home</a></li>
+              <li><a href="#courses" className="text-white/60 hover:text-green transition-colors">Cursos</a></li>
+              <li><a href="#about" className="text-white/60 hover:text-green transition-colors">Sobre</a></li>
             </ul>
           </div>
           
@@ -28,7 +27,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="https://pay.kiwify.com.br/cTh1aoy?afid=vHib36ed" 
-                  className="text-white/60 hover:text-neon transition-colors"
+                  className="text-white/60 hover:text-gold transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -38,7 +37,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="https://pay.kiwify.com.br/vTO5aL1?afid=cLHt9Aoe" 
-                  className="text-white/60 hover:text-neon transition-colors"
+                  className="text-white/60 hover:text-gold transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -48,7 +47,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="https://pay.kiwify.com.br/NVn43js?afid=KA3qbGkf" 
-                  className="text-white/60 hover:text-neon transition-colors"
+                  className="text-white/60 hover:text-gold transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -61,7 +60,7 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4">Contato</h4>
             <p className="text-white/60 mb-2">Entre em contato conosco para saber mais sobre nossos cursos.</p>
-            <a href="mailto:contato@booker.com.br" className="text-neon hover:text-neon/80 transition-colors">
+            <a href="mailto:contato@booker.com.br" className="text-green hover:text-green/80 transition-colors">
               contato@booker.com.br
             </a>
           </div>

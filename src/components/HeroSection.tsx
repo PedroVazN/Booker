@@ -106,14 +106,14 @@ const HeroSection = () => {
           >
             <a 
               href="#courses" 
-              className="green-button px-8 py-3 rounded-md text-lg relative overflow-hidden group animate-green-pulse"
+              className="bg-transparent border-2 border-green text-green hover:bg-green hover:text-graphite-lighter px-8 py-3 rounded-md text-lg relative overflow-hidden group shadow-[0_0_12px_rgba(39,174,96,0.3)] transition-all duration-300"
             >
-              <span className="relative z-10">Ver Cursos</span>
+              <span className="relative z-10 font-medium">Ver Cursos</span>
               <span className="absolute inset-0 bg-green/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></span>
             </a>
             <a 
               href="#about" 
-              className="bg-transparent border-2 border-gold/70 text-gold hover:border-gold px-8 py-3 rounded-md text-lg transition-all hover:bg-gold/5"
+              className="bg-transparent border-2 border-gold text-gold hover:bg-gold/10 hover:border-gold hover:text-gold px-8 py-3 rounded-md text-lg transition-all duration-300 font-medium"
             >
               Saiba Mais
             </a>

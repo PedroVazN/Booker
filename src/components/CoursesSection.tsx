@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import CourseCard from './CourseCard';
 
@@ -70,17 +69,17 @@ const CoursesSection = () => {
     <section id="courses" className="py-20 relative">
       {/* Background effects */}
       <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden -z-10">
-        <div className="absolute top-[40%] right-[30%] w-80 h-80 bg-neon/5 rounded-full blur-[90px] animate-pulse"></div>
-        <div className="absolute bottom-[20%] left-[20%] w-72 h-72 bg-neon/5 rounded-full blur-[80px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-[40%] right-[30%] w-80 h-80 bg-green/5 rounded-full blur-[90px] animate-pulse"></div>
+        <div className="absolute bottom-[20%] left-[20%] w-72 h-72 bg-gold/5 rounded-full blur-[80px] animate-pulse" style={{ animationDelay: '1s' }}></div>
         
         {/* Floating particles */}
-        <div className="absolute w-3 h-3 bg-neon/30 rounded-full top-[10%] left-[10%] animate-[float_15s_ease-in-out_infinite]"></div>
-        <div className="absolute w-2 h-2 bg-neon/20 rounded-full top-[30%] right-[15%] animate-[float_20s_ease-in-out_infinite]" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute w-4 h-4 bg-neon/20 rounded-full bottom-[20%] right-[25%] animate-[float_18s_ease-in-out_infinite]" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute w-3 h-3 bg-green/30 rounded-full top-[10%] left-[10%] animate-[float_15s_ease-in-out_infinite]"></div>
+        <div className="absolute w-2 h-2 bg-gold/20 rounded-full top-[30%] right-[15%] animate-[float_20s_ease-in-out_infinite]" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute w-4 h-4 bg-green/20 rounded-full bottom-[20%] right-[25%] animate-[float_18s_ease-in-out_infinite]" style={{ animationDelay: '1s' }}></div>
         
         {/* Animated grid */}
         <div className="absolute inset-0">
-          <div className="h-full w-full bg-[linear-gradient(rgba(57,255,20,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(57,255,20,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+          <div className="h-full w-full bg-[linear-gradient(rgba(39,174,96,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(39,174,96,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         </div>
       </div>
       
@@ -89,9 +88,9 @@ const CoursesSection = () => {
           ref={titleRef}
           className="text-center mb-16 opacity-0"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 neon-text relative inline-block">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 green-text relative inline-block">
             Nossos Cursos
-            <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-neon/50"></span>
+            <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-green/50"></span>
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto text-lg mt-6">
             Transforme sua relação com o dinheiro através dos nossos cursos especializados em finanças pessoais e investimentos.

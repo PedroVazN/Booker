@@ -55,9 +55,9 @@ const Navbar = () => {
                 ))}
                 <a 
                   href="#courses" 
-                  className="green-button px-4 py-2 rounded-md relative overflow-hidden group animate-green-pulse"
+                  className="bg-transparent border-2 border-green text-green hover:bg-green hover:text-graphite-lighter px-4 py-2 rounded-md relative overflow-hidden group transition-all duration-300"
                 >
-                  <span className="relative z-10">Explorar Cursos</span>
+                  <span className="relative z-10 font-medium">Explorar Cursos</span>
                   <span className="absolute inset-0 bg-green/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
                 </a>
               </div>
@@ -107,7 +107,7 @@ const Navbar = () => {
               </a>
               <a 
                 href="#courses" 
-                className="gold-button py-2 px-4 rounded-md animate-gold-pulse flex justify-center items-center"
+                className="bg-transparent border-2 border-gold text-gold hover:bg-gold hover:text-graphite py-2 px-4 rounded-md flex justify-center items-center transition-all duration-300 font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 Explorar Cursos
