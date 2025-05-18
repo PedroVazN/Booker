@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 
 const HeroSection = () => {
@@ -53,18 +52,18 @@ const HeroSection = () => {
     <section id="home" className="relative pt-24 pb-16 md:pt-32 md:pb-24 min-h-[100vh] flex items-center">
       {/* Background effects */}
       <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden -z-10">
-        <div className="absolute top-[20%] left-[10%] w-64 h-64 bg-neon/5 rounded-full blur-[80px] animate-pulse parallax-element" data-speed="0.02"></div>
-        <div className="absolute top-[60%] right-[10%] w-96 h-96 bg-neon/5 rounded-full blur-[100px] animate-pulse parallax-element" data-speed="0.03" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute bottom-[10%] left-[30%] w-80 h-80 bg-neon/5 rounded-full blur-[90px] animate-pulse parallax-element" data-speed="0.04" style={{ animationDelay: '0.8s' }}></div>
+        <div className="absolute top-[20%] left-[10%] w-64 h-64 bg-green/5 rounded-full blur-[80px] animate-pulse parallax-element" data-speed="0.02"></div>
+        <div className="absolute top-[60%] right-[10%] w-96 h-96 bg-gold/5 rounded-full blur-[100px] animate-pulse parallax-element" data-speed="0.03" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute bottom-[10%] left-[30%] w-80 h-80 bg-green/5 rounded-full blur-[90px] animate-pulse parallax-element" data-speed="0.04" style={{ animationDelay: '0.8s' }}></div>
         
         {/* Floating code particles */}
-        <div className="absolute top-[15%] left-[20%] text-neon/10 text-xs font-mono animate-[float_25s_ease-in-out_infinite] parallax-element" data-speed="0.05">
+        <div className="absolute top-[15%] left-[20%] text-green/10 text-xs font-mono animate-[float_25s_ease-in-out_infinite] parallax-element" data-speed="0.05">
           {'{invest()}'}
         </div>
-        <div className="absolute top-[25%] right-[25%] text-neon/10 text-xs font-mono animate-[float_20s_ease-in-out_infinite] parallax-element" data-speed="0.07" style={{ animationDelay: '2s' }}>
+        <div className="absolute top-[25%] right-[25%] text-gold/10 text-xs font-mono animate-[float_20s_ease-in-out_infinite] parallax-element" data-speed="0.07" style={{ animationDelay: '2s' }}>
           {'const future = invest(money)'}
         </div>
-        <div className="absolute bottom-[30%] left-[15%] text-neon/10 text-xs font-mono animate-[float_30s_ease-in-out_infinite] parallax-element" data-speed="0.06" style={{ animationDelay: '1s' }}>
+        <div className="absolute bottom-[30%] left-[15%] text-green/10 text-xs font-mono animate-[float_30s_ease-in-out_infinite] parallax-element" data-speed="0.06" style={{ animationDelay: '1s' }}>
           {'if(knowledge) { success = true }'}
         </div>
         
@@ -72,7 +71,7 @@ const HeroSection = () => {
         {[...Array(15)].map((_, i) => (
           <div 
             key={i}
-            className="absolute w-1 h-1 bg-neon/30 rounded-full"
+            className="absolute w-1 h-1 bg-green/30 rounded-full"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
@@ -83,14 +82,14 @@ const HeroSection = () => {
         ))}
         
         {/* Animated grid lines */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(57,255,20,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(57,255,20,0.03)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(39,174,96,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(39,174,96,0.03)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
       </div>
       
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h1 
             ref={titleRef}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 neon-text tracking-tight opacity-0 translate-y-10 transition-all duration-700"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 green-text tracking-tight opacity-0 translate-y-10 transition-all duration-700"
           >
             Invista no seu futuro financeiro
           </h1>
@@ -107,14 +106,14 @@ const HeroSection = () => {
           >
             <a 
               href="#courses" 
-              className="neon-button px-8 py-3 rounded-md text-lg relative overflow-hidden group animate-neon-pulse"
+              className="green-button px-8 py-3 rounded-md text-lg relative overflow-hidden group animate-green-pulse"
             >
               <span className="relative z-10">Ver Cursos</span>
-              <span className="absolute inset-0 bg-neon/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></span>
+              <span className="absolute inset-0 bg-green/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></span>
             </a>
             <a 
               href="#about" 
-              className="bg-transparent border-2 border-white/30 text-white hover:border-white/60 px-8 py-3 rounded-md text-lg transition-all hover:bg-white/5"
+              className="bg-transparent border-2 border-gold/70 text-gold hover:border-gold px-8 py-3 rounded-md text-lg transition-all hover:bg-gold/5"
             >
               Saiba Mais
             </a>

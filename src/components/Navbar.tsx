@@ -26,7 +26,7 @@ const Navbar = () => {
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-dark/90 backdrop-blur-lg border-b border-neon/30 py-3' 
+          ? 'bg-graphite/90 backdrop-blur-lg border-b border-green/30 py-3' 
           : 'bg-transparent py-5'
       }`}>
         <div className="container mx-auto px-4 lg:px-8">
@@ -34,9 +34,9 @@ const Navbar = () => {
             {/* Main Navigation */}
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-2">
-                <span className="font-orbitron text-2xl md:text-3xl font-bold neon-text relative overflow-hidden group">
+                <span className="font-orbitron text-2xl md:text-3xl font-bold green-text relative overflow-hidden group">
                   <span className="relative z-10">Booker</span>
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-neon transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                 </span>
               </div>
 
@@ -46,19 +46,19 @@ const Navbar = () => {
                   <a 
                     key={item} 
                     href={`#${item.toLowerCase()}`} 
-                    className="text-white hover:text-neon transition-colors relative group overflow-hidden"
+                    className="text-white hover:text-green transition-colors relative group overflow-hidden"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     {item}
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-neon transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                   </a>
                 ))}
                 <a 
                   href="#courses" 
-                  className="neon-button px-4 py-2 rounded-md relative overflow-hidden group animate-neon-pulse"
+                  className="green-button px-4 py-2 rounded-md relative overflow-hidden group animate-green-pulse"
                 >
                   <span className="relative z-10">Explorar Cursos</span>
-                  <span className="absolute inset-0 bg-neon/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+                  <span className="absolute inset-0 bg-green/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
                 </a>
               </div>
 
@@ -66,7 +66,7 @@ const Navbar = () => {
               <div className="md:hidden">
                 <button 
                   onClick={() => setIsOpen(!isOpen)} 
-                  className="text-white hover:text-neon p-2 transition-all duration-300"
+                  className="text-white hover:text-gold p-2 transition-all duration-300"
                   aria-label="Toggle menu"
                 >
                   {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -78,7 +78,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div 
-          className={`md:hidden absolute top-full left-0 right-0 bg-dark-lighter/90 backdrop-blur-lg border-b border-neon/30 shadow-lg transition-all duration-300 overflow-hidden ${
+          className={`md:hidden absolute top-full left-0 right-0 bg-graphite-lighter/90 backdrop-blur-lg border-b border-green/30 shadow-lg transition-all duration-300 overflow-hidden ${
             isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
@@ -86,28 +86,28 @@ const Navbar = () => {
             <div className="flex flex-col space-y-4 stagger-animation">
               <a 
                 href="#home" 
-                className="text-white hover:text-neon transition-all p-2 border-b border-neon/10" 
+                className="text-white hover:text-gold transition-all p-2 border-b border-green/10" 
                 onClick={() => setIsOpen(false)}
               >
                 Home
               </a>
               <a 
                 href="#courses" 
-                className="text-white hover:text-neon transition-all p-2 border-b border-neon/10" 
+                className="text-white hover:text-gold transition-all p-2 border-b border-green/10" 
                 onClick={() => setIsOpen(false)}
               >
                 Cursos
               </a>
               <a 
                 href="#about" 
-                className="text-white hover:text-neon transition-all p-2 border-b border-neon/10" 
+                className="text-white hover:text-gold transition-all p-2 border-b border-green/10" 
                 onClick={() => setIsOpen(false)}
               >
                 Sobre
               </a>
               <a 
                 href="#courses" 
-                className="neon-button py-2 px-4 rounded-md animate-neon-pulse flex justify-center items-center"
+                className="gold-button py-2 px-4 rounded-md animate-gold-pulse flex justify-center items-center"
                 onClick={() => setIsOpen(false)}
               >
                 Explorar Cursos

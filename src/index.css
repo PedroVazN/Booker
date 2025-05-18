@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -8,33 +6,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 6%;
-    --foreground: 120 100% 54%;
+    --background: 210 30% 24%;
+    --foreground: 145 55% 42%;
 
-    --card: 0 0% 9%;
+    --card: 210 30% 24%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 6%;
-    --popover-foreground: 120 100% 54%;
+    --popover: 210 30% 24%;
+    --popover-foreground: 145 55% 42%;
 
-    --primary: 120 100% 54%;
-    --primary-foreground: 0 0% 6%;
+    --primary: 145 55% 42%;
+    --primary-foreground: 210 30% 24%;
 
-    --secondary: 120 50% 30%;
-    --secondary-foreground: 120 100% 54%;
+    --secondary: 145 40% 35%;
+    --secondary-foreground: 145 55% 42%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 210 30% 30%;
+    --muted-foreground: 0 0% 80%;
 
-    --accent: 120 70% 40%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 42 89% 52%;
+    --accent-foreground: 210 30% 24%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 120 50% 20%;
-    --input: 120 50% 20%;
-    --ring: 120 100% 54%;
+    --border: 145 40% 30%;
+    --input: 145 40% 30%;
+    --ring: 145 55% 42%;
 
     --radius: 0.5rem;
 
@@ -55,7 +53,7 @@
   }
 
   body {
-    @apply bg-dark text-neon font-poppins overflow-x-hidden;
+    @apply bg-graphite text-green font-poppins overflow-x-hidden;
   }
   
   h1, h2, h3, h4 {
@@ -64,22 +62,40 @@
 }
 
 @layer utilities {
-  .neon-border {
-    @apply border border-neon shadow-[0_0_10px_rgba(57,255,20,0.5)];
+  .green-border {
+    @apply border border-green shadow-[0_0_10px_rgba(39,174,96,0.5)];
   }
   
-  .neon-text {
-    @apply text-neon drop-shadow-[0_0_6px_rgba(57,255,20,0.7)];
+  .gold-border {
+    @apply border border-gold shadow-[0_0_10px_rgba(241,196,15,0.5)];
   }
   
-  .neon-button {
-    @apply bg-transparent border-2 border-neon text-neon 
-           hover:bg-neon hover:text-dark-lighter hover:shadow-[0_0_15px_rgba(57,255,20,0.7)] 
+  .green-text {
+    @apply text-green drop-shadow-[0_0_6px_rgba(39,174,96,0.7)];
+  }
+  
+  .gold-text {
+    @apply text-gold drop-shadow-[0_0_6px_rgba(241,196,15,0.7)];
+  }
+  
+  .green-button {
+    @apply bg-transparent border-2 border-green text-green 
+           hover:bg-green hover:text-graphite-lighter hover:shadow-[0_0_15px_rgba(39,174,96,0.7)] 
            transition-all duration-300 font-medium;
   }
 
-  .neon-glow {
-    @apply shadow-[0_0_15px_rgba(57,255,20,0.5),_0_0_30px_rgba(57,255,20,0.3),_0_0_45px_rgba(57,255,20,0.1)];
+  .gold-button {
+    @apply bg-transparent border-2 border-gold text-gold 
+           hover:bg-gold hover:text-graphite hover:shadow-[0_0_15px_rgba(241,196,15,0.7)] 
+           transition-all duration-300 font-medium;
+  }
+
+  .green-glow {
+    @apply shadow-[0_0_15px_rgba(39,174,96,0.5),_0_0_30px_rgba(39,174,96,0.3),_0_0_45px_rgba(39,174,96,0.1)];
+  }
+
+  .gold-glow {
+    @apply shadow-[0_0_15px_rgba(241,196,15,0.5),_0_0_30px_rgba(241,196,15,0.3),_0_0_45px_rgba(241,196,15,0.1)];
   }
 
   .smooth-scroll {
@@ -87,7 +103,7 @@
   }
 
   .glass-effect {
-    @apply backdrop-blur-md bg-dark-lighter/40 border border-neon/20;
+    @apply backdrop-blur-md bg-graphite-lighter/40 border border-green/20;
   }
 }
 
@@ -179,7 +195,7 @@
 }
 
 .animated-gradient {
-  background: linear-gradient(90deg, rgba(57, 255, 20, 0.1), rgba(57, 255, 20, 0.2), rgba(57, 255, 20, 0.1));
+  background: linear-gradient(90deg, rgba(39, 174, 96, 0.1), rgba(241, 196, 15, 0.2), rgba(39, 174, 96, 0.1));
   background-size: 200% 200%;
   animation: gradient-shift 5s ease infinite;
 }
@@ -187,7 +203,7 @@
 .typing-animation {
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid #39FF14;
+  border-right: 3px solid #27AE60;
   width: 0;
   animation: typing 3.5s steps(40, end) forwards, blink 1s step-end infinite;
 }

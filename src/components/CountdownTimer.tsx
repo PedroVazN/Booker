@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Clock } from 'lucide-react';
 
@@ -33,14 +32,14 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="bg-dark-lighter/80 backdrop-blur-md px-3 py-2 rounded-full flex items-center gap-2 neon-border animate-pulse">
-      <Clock size={16} className="text-neon" />
+    <div className="bg-graphite-lighter/80 backdrop-blur-md px-3 py-2 rounded-full flex items-center gap-2 gold-border animate-pulse">
+      <Clock size={16} className="text-gold" />
       <div className="text-white text-sm font-medium">
-        <span className="font-orbitron text-neon">{formatTime(timeLeft.hours)}</span>
+        <span className="font-orbitron text-gold">{formatTime(timeLeft.hours)}</span>
         <span className="text-white/70">:</span>
-        <span className="font-orbitron text-neon">{formatTime(timeLeft.minutes)}</span>
+        <span className="font-orbitron text-gold">{formatTime(timeLeft.minutes)}</span>
         <span className="text-white/70">:</span>
-        <span className="font-orbitron text-neon">{formatTime(timeLeft.seconds)}</span>
+        <span className="font-orbitron text-gold">{formatTime(timeLeft.seconds)}</span>
         <span className="ml-2 text-xs font-medium text-white/80">restantes para o fim da promoção</span>
       </div>
     </div>
