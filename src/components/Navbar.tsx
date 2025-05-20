@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import CountdownTimer from './CountdownTimer';
+import logo from '../../logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,13 +35,11 @@ const Navbar = () => {
             {/* Main Navigation */}
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-2">
-                <span className="font-orbitron text-2xl md:text-3xl font-bold green-text relative overflow-hidden group">
-                  <span className="relative z-10">Booker</span>
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-                </span>
+                <img src={logo} alt="Logo" className="h-30 w-40" />
               </div>
 
               {/* Desktop Navigation */}
+              
               <div className="hidden md:flex gap-8 items-center">
                 {['Home', 'Cursos', 'Sobre'].map((item, index) => (
                   <a 
@@ -118,7 +117,7 @@ const Navbar = () => {
       </nav>
       
       {/* Countdown Timer posicionado abaixo da navbar */}
-      <div className="fixed top-16 left-0 right-0 z-40 flex justify-center mt-4">
+      <div className="fixed left-0 right-0 z-40 flex justify-center mt-6" style={{ top: 'calc(88px + 12px)' }}>
         <CountdownTimer />
       </div>
     </>

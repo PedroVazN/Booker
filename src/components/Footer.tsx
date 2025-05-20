@@ -60,7 +60,7 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4">Contato</h4>
             <p className="text-white/60 mb-2">Entre em contato conosco para saber mais sobre nossos cursos.</p>
-            <a href="mailto:contato@booker.com.br" className="text-green hover:text-green/80 transition-colors">
+            <a href="mailto:booker.net@outlook.com" className="text-green hover:text-green/80 transition-colors">
               contato@booker.com.br
             </a>
           </div>

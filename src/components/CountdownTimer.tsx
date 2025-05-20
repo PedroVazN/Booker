@@ -2,28 +2,23 @@ import React, { useState, useEffect } from 'react';
 import { Clock } from 'lucide-react';
 
 const CountdownTimer = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    hours: 23,
-    minutes: 59,
-    seconds: 59
-  });
+  const calculateTimeLeft = () => {
+    const now = new Date();
+    const endOfDay = new Date();
+    endOfDay.setHours(23, 59, 59, 999);
+    const diff = endOfDay.getTime() - now.getTime();
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    return { hours, minutes, seconds };
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTimeLeft(prevTime => {
-        if (prevTime.seconds > 0) {
-          return { ...prevTime, seconds: prevTime.seconds - 1 };
-        } else if (prevTime.minutes > 0) {
-          return { ...prevTime, minutes: prevTime.minutes - 1, seconds: 59 };
-        } else if (prevTime.hours > 0) {
-          return { hours: prevTime.hours - 1, minutes: 59, seconds: 59 };
-        } else {
-          // Reset to 24 hours when timer reaches zero
-          return { hours: 23, minutes: 59, seconds: 59 };
-        }
-      });
+      setTimeLeft(calculateTimeLeft());
     }, 1000);
-
     return () => clearInterval(interval);
   }, []);
 
