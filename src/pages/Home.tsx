@@ -15,7 +15,7 @@ const reviews = [
     rating: 5,
     date: "há 2 dias",
     text: "Os cursos da Booker transformaram completamente minha relação com o dinheiro. A didática é excelente e o conteúdo é muito prático. Recomendo demais!",
-    avatar: "https://i.pravatar.cc/150?img=1"
+    avatar: "https://i.pravatar.cc/150?img=29"
   },
   {
     name: "Carlos Oliveira",
@@ -29,7 +29,7 @@ const reviews = [
     rating: 5,
     date: "há 2 semanas",
     text: "A planilha de controle financeiro é sensacional! Nunca imaginei que conseguiria organizar minhas finanças de forma tão simples e eficiente.",
-    avatar: "https://i.pravatar.cc/150?img=3"
+    avatar: "https://i.pravatar.cc/150?img=32"
   },
   {
     name: "Pedro Costa",
