@@ -14,6 +14,14 @@ interface CoursePageProps {
   benefits: string[];
   imageUrl: string;
   kiwifyLink: string;
+  offers?: {
+    title: string;
+    description: string;
+    price: string;
+  }[];
+  securityInfo?: string;
+  requirements?: string[];
+  videoUrl?: string;
 }
 
 const CoursePage: React.FC<CoursePageProps> = ({
@@ -24,7 +32,11 @@ const CoursePage: React.FC<CoursePageProps> = ({
   modules,
   benefits,
   imageUrl,
-  kiwifyLink
+  kiwifyLink,
+  offers,
+  securityInfo,
+  requirements,
+  videoUrl
 }) => {
   const handleKiwifyClick = () => {
     window.open(kiwifyLink, '_blank');
@@ -38,13 +50,21 @@ const CoursePage: React.FC<CoursePageProps> = ({
       <section className="pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-8">
-              <img 
-                src={imageUrl} 
-                alt={title} 
-                className="w-full max-w-2xl mx-auto rounded-lg shadow-lg"
-              />
-            </div>
+            {/* Vídeo do YouTube */}
+            {videoUrl && (
+              <div className="mb-8">
+                <div className="relative pb-[56.25%] h-0 rounded-lg overflow-hidden">
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src={videoUrl.replace('youtu.be', 'youtube.com/embed')}
+                    title="Vídeo de apresentação"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            )}
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 green-text">
               {title}
             </h1>
@@ -97,6 +117,85 @@ const CoursePage: React.FC<CoursePageProps> = ({
           </div>
         </div>
       </section>
+
+      {/* Preço e CTA */}
+      <section className="py-16 bg-graphite-lighter/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6 green-text">Invista em seu Futuro</h2>
+            <p className="text-xl text-white/80 mb-8">
+              Comece sua jornada para a liberdade financeira hoje mesmo
+            </p>
+            
+            {/* Ofertas Especiais */}
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              {offers?.map((offer, index) => (
+                <div key={index} className="bg-graphite-lighter/10 p-6 rounded-lg hover:bg-graphite-lighter/20 transition-all duration-300">
+                  <h3 className="text-xl font-bold mb-2 text-gold">{offer.title}</h3>
+                  <p className="text-white/80 mb-4">{offer.description}</p>
+                  <p className="text-2xl font-bold text-green mb-4">{offer.price}</p>
+                  <a 
+                    href={kiwifyLink}
+                    className="bg-green hover:bg-green/90 text-white px-6 py-3 rounded-md text-lg font-medium transition-all duration-300 inline-block w-full text-center"
+                  >
+                    QUERO ESTA OFERTA
+                  </a>
+                </div>
+              ))}
+            </div>
+
+            {/* Informação de Segurança */}
+            {securityInfo && (
+              <div className="bg-graphite-lighter/10 p-6 rounded-lg mb-8">
+                <p className="text-white/80 flex items-center justify-center gap-2">
+                  <svg className="w-6 h-6 text-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                  {securityInfo}
+                </p>
+              </div>
+            )}
+
+            <div className="flex flex-col items-center gap-4">
+              <p className="text-2xl font-bold text-white">
+                Acesso Vitalício por Apenas
+              </p>
+              <p className="text-4xl font-bold text-green">
+                R$ {price.toLocaleString('pt-BR')}
+              </p>
+              <a 
+                href={kiwifyLink}
+                className="bg-green hover:bg-green/90 text-white px-8 py-4 rounded-md text-xl font-medium transition-all duration-300 inline-block"
+              >
+                Matricule-se Agora
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Requisitos do Sistema */}
+      {requirements && requirements.length > 0 && (
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-12 green-text">Requisitos do Sistema</h2>
+              <div className="bg-graphite-lighter/10 p-6 rounded-lg">
+                <ul className="space-y-4">
+                  {requirements.map((requirement, index) => (
+                    <li key={index} className="flex items-center gap-3 text-white/80">
+                      <svg className="w-5 h-5 text-green flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {requirement}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA Final */}
       <section className="py-16 bg-graphite-lighter/5">
