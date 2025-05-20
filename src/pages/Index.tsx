@@ -6,10 +6,12 @@ import AboutSection from '@/components/AboutSection';
 import CtaSection from '@/components/CtaSection';
 import Footer from '@/components/Footer';
 import CountdownTimer from '@/components/CountdownTimer';
+import BackgroundAnimation from '@/components/BackgroundAnimation';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-graphite text-white overflow-x-hidden">
+      <BackgroundAnimation />
       <Navbar />
       <HeroSection />
       <CoursesSection />

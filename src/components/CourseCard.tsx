@@ -53,6 +53,7 @@ const CourseCard = ({
   }, [delay]);
 
   const handleCardClick = () => {
+    window.scrollTo(0, 0);
     navigate(`/curso/${courseId}`);
   };
 
