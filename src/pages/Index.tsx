@@ -5,6 +5,7 @@ import CoursesSection from '@/components/CoursesSection';
 import AboutSection from '@/components/AboutSection';
 import CtaSection from '@/components/CtaSection';
 import Footer from '@/components/Footer';
+import CountdownTimer from '@/components/CountdownTimer';
 
 const Index = () => {
   return (
@@ -15,6 +16,11 @@ const Index = () => {
       <AboutSection />
       <CtaSection />
       <Footer />
+      
+      {/* Countdown Timer */}
+      <div className="fixed bottom-4 left-4 z-50">
+        <CountdownTimer />
+      </div>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import CourseCard from './CourseCard';
 
 const courses = [
   {
-    id: 1,
+    id: "investidor-em-uma-hora",
     title: "Investidor em uma hora",
     description: "Aprenda a investir de forma inteligente e comece sua jornada para a liberdade financeira mesmo com pouco tempo disponível.",
     regularPrice: "441,00",
@@ -12,7 +12,7 @@ const courses = [
     imageUrl: "https://aws-assets.kiwify.com.br/cdn-cgi/image/fit=scale-down,width=1000/fPC2EqvXuzZwSWA/img_builder_44679afb-66ea-44ae-83d9-15afbb957a68_871022d88af74ceeb21f168e427072fe.png"
   },
   {
-    id: 2,
+    id: "planilha-controle-financeiro",
     title: "Planilha de Controle Financeiro Pessoal 2.0",
     description: "Organize suas finanças com nossa planilha avançada. Monitore gastos, economias e investimentos em um só lugar.",
     regularPrice: "397,00",
@@ -21,7 +21,7 @@ const courses = [
     imageUrl: "https://aws-assets.kiwify.com.br/cdn-cgi/image/fit=scale-down,width=700/speKigpg0cHiJoe/img_builder_925fa093-0526-4745-a5c5-1e2f4bfc38fa_8a1347b851f34feaa82f2d47989274e7.png"
   },
   {
-    id: 3,
+    id: "kit-desafio-controle-financeiro",
     title: "Kit Desafio Controle Financeiro",
     description: "Conjunto completo com ebooks e planilha para transformar sua vida financeira em apenas 30 dias.",
     regularPrice: "49,99",
@@ -104,6 +104,7 @@ const CoursesSection = () => {
           {courses.map((course, index) => (
             <CourseCard
               key={course.id}
+              courseId={course.id}
               title={course.title}
               description={course.description}
               regularPrice={course.regularPrice}

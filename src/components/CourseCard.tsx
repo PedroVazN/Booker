@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface CourseCardProps {
   title: string;
@@ -9,6 +10,7 @@ interface CourseCardProps {
   link: string;
   imageUrl: string;
   delay?: number;
+  courseId: string;
 }
 
 const CourseCard = ({ 
@@ -18,10 +20,12 @@ const CourseCard = ({
   salePrice, 
   link,
   imageUrl,
-  delay = 0
+  delay = 0,
+  courseId
 }: CourseCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -48,13 +52,23 @@ const CourseCard = ({
     };
   }, [delay]);
 
+  const handleCardClick = () => {
+    navigate(`/curso/${courseId}`);
+  };
+
+  const handleBuyClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    window.open(link, '_blank');
+  };
+
   return (
     <div 
       ref={cardRef}
-      className="bg-graphite-card rounded-xl overflow-hidden border border-green/20 hover:green-border transition-all duration-500 flex flex-col h-full opacity-0 translate-y-10 transform hover:-translate-y-2"
+      className="bg-graphite-card rounded-xl overflow-hidden border border-green/20 hover:green-border transition-all duration-500 flex flex-col h-full opacity-0 translate-y-10 transform hover:-translate-y-2 cursor-pointer"
       style={{ transitionDelay: `${delay}ms` }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={handleCardClick}
     >
       <div className="aspect-[16/9] overflow-hidden relative group">
         <div className="absolute inset-0 bg-gradient-to-t from-graphite-card to-transparent z-10"></div>
@@ -85,10 +99,8 @@ const CourseCard = ({
           </div>
         </div>
         
-        <a 
-          href={link} 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <button 
+          onClick={handleBuyClick}
           className="bg-transparent border-2 border-green text-green hover:bg-green hover:text-graphite-lighter py-3 px-4 rounded-md flex items-center justify-center gap-2 group relative overflow-hidden transition-all duration-300"
         >
           <span className="relative z-10 font-medium">Comprar Agora</span> 
@@ -97,7 +109,7 @@ const CourseCard = ({
             className="group-hover:translate-x-1 transition-transform relative z-10" 
           />
           <span className="absolute inset-0 bg-green/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></span>
-        </a>
+        </button>
       </div>
     </div>
   );
