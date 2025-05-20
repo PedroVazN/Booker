@@ -1,60 +1,40 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useEffect } from "react";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Index from './pages/Index';
+import InvestimentosBasicos from './pages/InvestimentosBasicos';
+import FinancasPessoais from './pages/FinancasPessoais';
 import InvestidorEmUmaHora from './pages/InvestidorEmUmaHora';
 import PlanilhaControleFinanceiro from './pages/PlanilhaControleFinanceiro';
 import KitDesafioControleFinanceiro from './pages/KitDesafioControleFinanceiro';
+import NotFound from './pages/NotFound';
 
-const queryClient = new QueryClient();
+// Estilo global para scroll suave
+const globalStyles = `
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+`;
 
 const App = () => {
-  // Add smooth scrolling behavior
-  useEffect(() => {
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        const target = document.querySelector(this.getAttribute('href') || '');
-        if (!target) return;
-        
-        window.scrollTo({
-          top: (target as HTMLElement).offsetTop - 80, // Offset for fixed header
-          behavior: 'smooth'
-        });
-      });
-    });
-    
-    // Add class to body for global styles
-    document.body.classList.add('smooth-scroll');
-    
-    return () => {
-      document.body.classList.remove('smooth-scroll');
-    };
-  }, []);
-  
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/curso/investidor-em-uma-hora" element={<InvestidorEmUmaHora />} />
-            <Route path="/curso/planilha-controle-financeiro" element={<PlanilhaControleFinanceiro />} />
-            <Route path="/curso/kit-desafio-controle-financeiro" element={<KitDesafioControleFinanceiro />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
+    <Router>
+      <style>{globalStyles}</style>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/curso/investimentos-basicos" element={<InvestimentosBasicos />} />
+        <Route path="/curso/financas-pessoais" element={<FinancasPessoais />} />
+        <Route path="/curso/investidor-em-uma-hora" element={<InvestidorEmUmaHora />} />
+        <Route path="/curso/planilha-controle-financeiro" element={<PlanilhaControleFinanceiro />} />
+        <Route path="/curso/kit-desafio-controle-financeiro" element={<KitDesafioControleFinanceiro />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 };
 
