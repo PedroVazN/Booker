@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Index from './pages/Index';
+import Home from './pages/Home';
+import Cursos from './pages/Cursos';
+import Sobre from './pages/Sobre';
 import InvestimentosBasicos from './pages/InvestimentosBasicos';
 import FinancasPessoais from './pages/FinancasPessoais';
 import InvestidorEmUmaHora from './pages/InvestidorEmUmaHora';
@@ -26,7 +28,10 @@ const App = () => {
     <Router>
       <style>{globalStyles}</style>
       <Routes>
-        <Route path="/" element={<Index />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/cursos" element={<Cursos />} />
+        <Route path="/sobre" element={<Sobre />} />
         <Route path="/curso/investimentos-basicos" element={<InvestimentosBasicos />} />
         <Route path="/curso/financas-pessoais" element={<FinancasPessoais />} />
         <Route path="/curso/investidor-em-uma-hora" element={<InvestidorEmUmaHora />} />

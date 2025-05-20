@@ -88,10 +88,6 @@ const CoursesSection = () => {
           ref={titleRef}
           className="text-center mb-16 opacity-0"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 green-text relative inline-block">
-            Nossos Cursos
-            <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-green/50"></span>
-          </h2>
           <p className="text-white/70 max-w-2xl mx-auto text-lg mt-6">
             Transforme sua relação com o dinheiro através dos nossos cursos especializados em finanças pessoais e investimentos.
           </p>

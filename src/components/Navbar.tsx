@@ -54,19 +54,29 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex gap-8 items-center">
-              {['Home', 'Cursos', 'Sobre'].map((item, index) => (
-                <a 
-                  key={item} 
-                  href={`#${item.toLowerCase()}`} 
-                  className="text-white hover:text-green transition-colors relative group overflow-hidden"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  {item}
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-                </a>
-              ))}
               <a 
-                href="#courses" 
+                href="/home" 
+                className="text-white hover:text-green transition-colors relative group overflow-hidden"
+              >
+                Home
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+              </a>
+              <a 
+                href="/cursos" 
+                className="text-white hover:text-green transition-colors relative group overflow-hidden"
+              >
+                Cursos
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+              </a>
+              <a 
+                href="/sobre" 
+                className="text-white hover:text-green transition-colors relative group overflow-hidden"
+              >
+                Sobre
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+              </a>
+              <a 
+                href="/cursos" 
                 className="bg-transparent border-2 border-green text-green hover:bg-green hover:text-graphite-lighter px-4 py-2 rounded-md relative overflow-hidden group transition-all duration-300"
               >
                 <span className="relative z-10 font-medium">Explorar Cursos</span>
@@ -92,28 +102,28 @@ const Navbar = () => {
           >
             <div className="flex flex-col space-y-4 stagger-animation">
               <a 
-                href="#home" 
+                href="/home" 
                 className="text-white hover:text-gold transition-all p-2 border-b border-green/10" 
                 onClick={() => setIsOpen(false)}
               >
                 Home
               </a>
               <a 
-                href="#courses" 
+                href="/cursos" 
                 className="text-white hover:text-gold transition-all p-2 border-b border-green/10" 
                 onClick={() => setIsOpen(false)}
               >
                 Cursos
               </a>
               <a 
-                href="#about" 
+                href="/sobre" 
                 className="text-white hover:text-gold transition-all p-2 border-b border-green/10" 
                 onClick={() => setIsOpen(false)}
               >
                 Sobre
               </a>
               <a 
-                href="#courses" 
+                href="/cursos" 
                 className="bg-transparent border-2 border-gold text-gold hover:bg-gold hover:text-graphite py-2 px-4 rounded-md flex justify-center items-center transition-all duration-300 font-medium"
                 onClick={() => setIsOpen(false)}
               >
