@@ -50,20 +50,14 @@ const CoursePage: React.FC<CoursePageProps> = ({
       <section className="pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Vídeo do YouTube */}
-            {videoUrl && (
-              <div className="mb-8">
-                <div className="relative pb-[56.25%] h-0 rounded-lg overflow-hidden">
-                  <iframe
-                    className="absolute top-0 left-0 w-full h-full"
-                    src={videoUrl.replace('youtu.be', 'youtube.com/embed')}
-                    title="Vídeo de apresentação"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-              </div>
-            )}
+            {/* Imagem do Curso */}
+            <div className="mb-8">
+              <img 
+                src={imageUrl} 
+                alt={title} 
+                className="w-full max-w-2xl mx-auto rounded-lg shadow-lg"
+              />
+            </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 green-text">
               {title}
