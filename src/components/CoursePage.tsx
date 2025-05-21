@@ -79,12 +79,14 @@ const CoursePage: React.FC<CoursePageProps> = ({
                 <span className="text-gold font-medium">Investimento:</span> R$ {price.toLocaleString('pt-BR')}
               </div>
             </div>
-            <button 
-              onClick={handleKiwifyClick}
-              className="bg-green hover:bg-green/90 text-white px-8 py-3 rounded-md text-lg font-medium transition-all duration-300"
+            <a 
+              href={kiwifyLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-green hover:bg-green/90 text-white px-8 py-3 rounded-md text-lg font-medium transition-all duration-300"
             >
               Matricule-se Agora
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -217,12 +219,14 @@ const CoursePage: React.FC<CoursePageProps> = ({
           <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
             Invista em seu futuro financeiro com um dos cursos mais completos do mercado
           </p>
-          <button 
-            onClick={handleKiwifyClick}
-            className="bg-green hover:bg-green/90 text-white px-8 py-3 rounded-md text-lg font-medium transition-all duration-300"
+          <a 
+            href={kiwifyLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green hover:bg-green/90 text-white px-8 py-3 rounded-md text-lg font-medium transition-all duration-300 inline-block"
           >
             Garantir minha vaga
-          </button>
+          </a>
         </div>
       </section>
 
