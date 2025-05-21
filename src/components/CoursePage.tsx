@@ -118,6 +118,34 @@ const CoursePage: React.FC<CoursePageProps> = ({
         </div>
       </section>
 
+      {/* Ofertas */}
+      {offers && offers.length > 0 && (
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-12 green-text">Ofertas Especiais</h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                {offers.map((offer, index) => (
+                  <div key={index} className="bg-graphite-lighter/10 p-6 rounded-lg">
+                    <h3 className="text-xl font-bold mb-2 green-text">{offer.title}</h3>
+                    <p className="text-white/80 mb-4">{offer.description}</p>
+                    <p className="text-2xl font-bold mb-4 green-text">{offer.price}</p>
+                    <a 
+                      href={kiwifyLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full text-center bg-green hover:bg-green/90 text-black font-bold py-3 px-6 rounded-lg transition-colors"
+                    >
+                      QUERO ESTA OFERTA
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Preço e CTA */}
       <section className="py-16 bg-graphite-lighter/5">
         <div className="container mx-auto px-4">
@@ -127,23 +155,6 @@ const CoursePage: React.FC<CoursePageProps> = ({
               Comece sua jornada para a liberdade financeira hoje mesmo
             </p>
             
-            {/* Ofertas Especiais */}
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
-              {offers?.map((offer, index) => (
-                <div key={index} className="bg-graphite-lighter/10 p-6 rounded-lg hover:bg-graphite-lighter/20 transition-all duration-300">
-                  <h3 className="text-xl font-bold mb-2 text-gold">{offer.title}</h3>
-                  <p className="text-white/80 mb-4">{offer.description}</p>
-                  <p className="text-2xl font-bold text-green mb-4">{offer.price}</p>
-                  <a 
-                    href={kiwifyLink}
-                    className="bg-green hover:bg-green/90 text-white px-6 py-3 rounded-md text-lg font-medium transition-all duration-300 inline-block w-full text-center"
-                  >
-                    QUERO ESTA OFERTA
-                  </a>
-                </div>
-              ))}
-            </div>
-
             {/* Informação de Segurança */}
             {securityInfo && (
               <div className="bg-graphite-lighter/10 p-6 rounded-lg mb-8">
