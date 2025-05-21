@@ -9,7 +9,7 @@ import InvestidorEmUmaHora from './pages/InvestidorEmUmaHora';
 import PlanilhaControleFinanceiro from './pages/PlanilhaControleFinanceiro';
 import KitDesafioControleFinanceiro from './pages/KitDesafioControleFinanceiro';
 import NotFound from './pages/NotFound';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 
 // Estilo global para scroll suave
 const globalStyles = `
