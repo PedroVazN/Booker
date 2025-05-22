@@ -69,9 +69,9 @@ export default {
 					light: 'rgba(39, 174, 96, 0.3)'
 				},
 				graphite: {
-					DEFAULT: '#2C3E50',
-					lighter: '#34495E',
-					card: '#2C3E50'
+					DEFAULT: '#1A1A1A',
+					lighter: '#2C2C2C',
+					card: '#1A1A1A'
 				},
 				gold: {
 					DEFAULT: '#F1C40F',
