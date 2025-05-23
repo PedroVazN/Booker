@@ -25,8 +25,8 @@ const courses = [
     title: "Kit Desafio Controle Financeiro",
     description: "Conjunto completo com ebooks e planilha para transformar sua vida financeira em apenas 30 dias.",
     regularPrice: "49,99",
-    salePrice: "19,99",
-    link: "https://pay.kiwify.com.br/NVn43js?afid=KA3qbGkf",
+    salePrice: "27,00",
+    link: "https://kiwify.app/qUiR7SR?afid=KA3qbGkf",
     imageUrl: "https://aws-assets.kiwify.com.br/cdn-cgi/image/fit=scale-down,width=700/IYCgXnHwsKQOGkY/img_builder_13030c96-81cf-4b7e-9f16-4f32b52c26ee_0237cb920ea341879367a0b894bcd57b.png"
   }
 ];

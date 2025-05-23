@@ -54,7 +54,11 @@ const CourseCard = ({
 
   const handleCardClick = () => {
     window.scrollTo(0, 0);
-    navigate(`/curso/${courseId}`);
+    if (courseId === "kit-desafio-controle-financeiro") {
+      window.open(link, '_blank');
+    } else {
+      navigate(`/curso/${courseId}`);
+    }
   };
 
   const handleBuyClick = (e: React.MouseEvent) => {

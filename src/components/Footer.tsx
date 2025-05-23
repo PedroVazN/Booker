@@ -46,7 +46,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://pay.kiwify.com.br/NVn43js?afid=KA3qbGkf" 
+                  href="https://kiwify.app/qUiR7SR?afid=KA3qbGkf" 
                   className="text-white/60 hover:text-gold transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"

@@ -8,7 +8,6 @@ import InvestimentosBasicos from './pages/InvestimentosBasicos';
 import FinancasPessoais from './pages/FinancasPessoais';
 import InvestidorEmUmaHora from './pages/InvestidorEmUmaHora';
 import PlanilhaControleFinanceiro from './pages/PlanilhaControleFinanceiro';
-import KitDesafioControleFinanceiro from './pages/KitDesafioControleFinanceiro';
 import NotFound from './pages/NotFound';
 import { Analytics } from "@vercel/analytics/react"
 
@@ -47,7 +46,6 @@ const App = () => {
         <Route path="/curso/financas-pessoais" element={<FinancasPessoais />} />
         <Route path="/curso/investidor-em-uma-hora" element={<InvestidorEmUmaHora />} />
         <Route path="/curso/planilha-controle-financeiro" element={<PlanilhaControleFinanceiro />} />
-        <Route path="/curso/kit-desafio-controle-financeiro" element={<KitDesafioControleFinanceiro />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Analytics />
