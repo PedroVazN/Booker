@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { hotjar } from 'react-hotjar';
 import Home from './pages/Home';
 import Cursos from './pages/Cursos';
 import Sobre from './pages/Sobre';
@@ -24,7 +25,16 @@ const globalStyles = `
   }
 `;
 
+const HOTJAR_ID = 6413670;
+
 const App = () => {
+  React.useEffect(() => {
+    hotjar.initialize({
+      id: HOTJAR_ID,
+      sv: 6
+    });
+  }, []);
+
   return (
     <Router>
       <style>{globalStyles}</style>
