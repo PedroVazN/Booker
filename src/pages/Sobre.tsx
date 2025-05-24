@@ -11,42 +11,42 @@ const reviews = [
     rating: 5,
     date: "há 2 dias",
     text: "Os cursos da Booker transformaram completamente minha relação com o dinheiro. A didática é excelente e o conteúdo é muito prático. Recomendo demais!",
-    avatar: "https://i.pravatar.cc/150?img=1"
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face"
   },
   {
     name: "Carlos Oliveira",
     rating: 5,
     date: "há 1 semana",
     text: "Comecei do zero e agora já consigo investir com confiança. O suporte é incrível e o material é muito bem estruturado. Vale cada centavo investido!",
-    avatar: "https://i.pravatar.cc/150?img=2"
+    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face"
   },
   {
     name: "Mariana Santos",
     rating: 5,
     date: "há 2 semanas",
     text: "A planilha de controle financeiro é sensacional! Nunca imaginei que conseguiria organizar minhas finanças de forma tão simples e eficiente.",
-    avatar: "https://i.pravatar.cc/150?img=3"
+    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face"
   },
   {
     name: "Pedro Costa",
     rating: 5,
     date: "há 1 mês",
     text: "O curso de investimentos básicos é perfeito para quem está começando. Explicações claras e exemplos práticos que fazem toda a diferença.",
-    avatar: "https://i.pravatar.cc/150?img=4"
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
   },
   {
     name: "Juliana Lima",
     rating: 5,
     date: "há 1 mês",
     text: "O Kit Desafio me ajudou a criar uma rotina financeira saudável. Em 30 dias já vi resultados significativos. Super recomendo!",
-    avatar: "https://i.pravatar.cc/150?img=5"
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
   },
   {
     name: "Rafael Mendes",
     rating: 5,
     date: "há 2 meses",
     text: "A qualidade dos cursos é impressionante. O conteúdo é atualizado e as estratégias são realmente aplicáveis no dia a dia.",
-    avatar: "https://i.pravatar.cc/150?img=6"
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
   }
 ];
 

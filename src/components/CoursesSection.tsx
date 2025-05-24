@@ -28,6 +28,15 @@ const courses = [
     salePrice: "27,00",
     link: "https://kiwify.app/qUiR7SR?afid=KA3qbGkf",
     imageUrl: "https://aws-assets.kiwify.com.br/cdn-cgi/image/fit=scale-down,width=700/IYCgXnHwsKQOGkY/img_builder_13030c96-81cf-4b7e-9f16-4f32b52c26ee_0237cb920ea341879367a0b894bcd57b.png"
+  },
+  {
+    id: "sistema-viral",
+    title: "Sistema Viral",
+    description: "Aprenda o jeito mais 'preguiçoso' de fazer de 2 a 20 mil/mês na internet, sem investir, sem aparecer e gastando só 3h por dia.",
+    regularPrice: "297,00",
+    salePrice: "197,00",
+    link: "https://www.sistemaviralafiliados.com/oficial-kiwify/?utm_source=afiliado&src=afiliado",
+    imageUrl: "https://aws-assets.kiwify.com.br/cdn-cgi/image/fit=scale-down,width=1000/3UYPzhTnvBHFkpl/img_builder_69e04643-0fcd-42d9-b051-13f38ebeaf56_97fccae591434305a812901057540d1b.png"
   }
 ];
 

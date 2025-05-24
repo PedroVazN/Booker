@@ -63,7 +63,12 @@ const CourseCard = ({
 
   const handleBuyClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    window.open(link, '_blank');
+    // Link específico do Kiwify para o Kit Desafio
+    if (courseId === "kit-desafio-controle-financeiro") {
+      window.open("https://pay.kiwify.com.br/NVn43js?afid=KA3qbGkf", '_blank');
+    } else {
+      window.open(link, '_blank');
+    }
   };
 
   return (
