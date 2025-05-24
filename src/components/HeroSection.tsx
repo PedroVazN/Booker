@@ -1,91 +1,38 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
 const HeroSection = () => {
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const descriptionRef = useRef<HTMLParagraphElement>(null);
-  const buttonsRef = useRef<HTMLDivElement>(null);
-  
-  useEffect(() => {
-    const titleElement = titleRef.current;
-    const descriptionElement = descriptionRef.current;
-    const buttonsElement = buttonsRef.current;
-
-    if (titleElement) {
-      titleElement.classList.add('opacity-100', 'translate-y-0');
-    }
-
-    if (descriptionElement) {
-      setTimeout(() => {
-        descriptionElement.classList.add('opacity-100', 'translate-y-0');
-      }, 300);
-    }
-
-    if (buttonsElement) {
-      setTimeout(() => {
-        buttonsElement.classList.add('opacity-100', 'translate-y-0');
-      }, 600);
-    }
-    
-    // Add mouse move effect for parallax
-    const handleMouseMove = (e: MouseEvent) => {
-      const x = e.clientX / window.innerWidth;
-      const y = e.clientY / window.innerHeight;
-      
-      document.querySelectorAll('.parallax-element').forEach((el) => {
-        const element = el as HTMLElement;
-        const speed = parseFloat(element.getAttribute('data-speed') || '0.05');
-        const moveX = (x * 100 - 50) * speed;
-        const moveY = (y * 100 - 50) * speed;
-        
-        element.style.transform = `translate(${moveX}px, ${moveY}px)`;
-      });
-    };
-    
-    document.addEventListener('mousemove', handleMouseMove);
-    
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
   return (
-    <section id="home" className="relative pt-24 pb-16 md:pt-32 md:pb-24 min-h-[100vh] flex items-center">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center justify-center">
-          <div className="w-full max-w-3xl flex flex-col items-center text-center z-10">
-            <h1 
-              ref={titleRef}
-              className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 green-text tracking-tight opacity-0 translate-y-10 transition-all duration-700"
-            >
-              Invista no seu futuro financeiro
-            </h1>
-            <p 
-              ref={descriptionRef}
-              className="text-white/80 text-base md:text-lg mb-6 leading-relaxed opacity-0 translate-y-10 transition-all duration-700"
-            >
-              Cursos desenvolvidos para transformar sua relação com dinheiro. <br className="hidden md:block" />
-              Domine investimentos e finanças pessoais com as melhores ferramentas do mercado.
-            </p>
-            <div 
-              ref={buttonsRef}
-              className="flex flex-wrap justify-center gap-3 opacity-0 translate-y-10 transition-all duration-700"
-            >
-              <a 
-                href="#courses" 
-                className="bg-transparent border-2 border-green text-green hover:bg-green hover:text-graphite-lighter px-6 py-2 rounded-md text-base relative overflow-hidden group shadow-[0_0_12px_rgba(39,174,96,0.3)] transition-all duration-300"
-              >
-                <span className="relative z-10 font-medium">Ver Cursos</span>
-                <span className="absolute inset-0 bg-green/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></span>
-              </a>
-              <a 
-                href="#about" 
-                className="bg-transparent border-2 border-gold text-gold hover:bg-gold/10 hover:border-gold hover:text-gold px-6 py-2 rounded-md text-base transition-all duration-300 font-medium"
-              >
-                Saiba Mais
-              </a>
-            </div>
+    <section className="relative w-full min-h-[60vh] flex items-center justify-center bg-graphite-dark overflow-hidden">
+      <div className="container mx-auto flex flex-col md:flex-row items-stretch justify-center p-0 md:p-0 z-10 relative min-h-[60vh]">
+        {/* Imagem ocupando metade da tela */}
+        <div className="w-full md:w-1/2 h-64 md:h-auto flex items-center justify-center overflow-hidden">
+          <img 
+            src="/pessoasegurandoipad.jpg" 
+            alt="Pessoa segurando iPad Booker" 
+            className="object-cover w-full h-full md:h-[60vh] md:rounded-none rounded-b-2xl shadow-xl"
+            style={{objectPosition: 'center'}}
+          />
+        </div>
+        {/* Texto e CTA com degradê */}
+        <div className="w-full md:w-1/2 flex flex-col items-end justify-center text-right px-6 md:px-12 py-8 md:py-0 bg-gradient-to-l from-[#23272A] via-[#23272A]/90 to-[#27AE60]/10">
+          <div className="flex flex-col items-end justify-center gap-2 md:gap-4 max-w-xl mx-auto">
+            <div className="text-[#27AE60] text-2xl md:text-4xl font-extrabold leading-tight" style={{textShadow: '0 2px 12px #23272A'}}>INVISTA NO QUE<br />REALMENTE IMPORTA:</div>
+            <div className="text-[#27AE60] text-3xl md:text-5xl font-black underline underline-offset-4" style={{textShadow: '0 2px 12px #23272A'}}>SEU FUTURO!</div>
+            <div className="text-white/90 text-base md:text-lg mt-2 md:mt-4 max-w-xs md:max-w-sm" style={{textShadow: '0 2px 8px #23272A'}}>Aprenda a investir, economizar e conquistar sua liberdade financeira com os melhores cursos do mercado.</div>
+            <a href="#courses" className="mt-4 md:mt-6 px-8 py-3 bg-gradient-to-r from-[#27AE60] to-[#43e97b] text-graphite-dark font-bold text-lg md:text-xl rounded-full shadow-lg hover:scale-105 hover:from-[#43e97b] hover:to-[#27AE60] transition-all duration-300">Quero Aprender!</a>
           </div>
         </div>
+      </div>
+      {/* Faixa inferior com linhas diagonais */}
+      <div className="absolute bottom-0 left-0 w-full h-8 md:h-12 bg-transparent flex items-end overflow-hidden z-20">
+        <svg width="100%" height="100%" viewBox="0 0 100 12" preserveAspectRatio="none" className="w-full h-full">
+          <defs>
+            <pattern id="diagonalLines" patternUnits="userSpaceOnUse" width="4" height="12" patternTransform="rotate(20)">
+              <rect x="0" y="0" width="1.5" height="12" fill="#27AE60" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#diagonalLines)" />
+        </svg>
       </div>
     </section>
   );
